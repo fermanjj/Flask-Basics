@@ -1,0 +1,20 @@
+{% extends 'default.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <h1>Welcome to the home page!</h1>
+
+    <form method="post" action="{{ url_for('name_route') }}">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" class="form-control" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+
+    <div class="row" style="margin-top: 15px">
+        <a href="{{ url_for('login') }}" class="btn btn-secondary">Login here</a>
+    </div>
+{% endblock %}

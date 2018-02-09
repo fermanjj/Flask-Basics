@@ -1,0 +1,17 @@
+
+<noscript><h1 style="color: red">JavaScript Must be Enabled!!!</h1></noscript>
+
+{# flashed messages #}
+<div class="container" id="flashed-message-alerts" style="margin-bottom: 25px">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.alert }} alert-dismissable fade show"
+                     style="margin-top: 5px; margin-bottom: 5px">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{ message.message | safe }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
